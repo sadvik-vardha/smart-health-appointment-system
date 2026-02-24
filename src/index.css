@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Healthcare Appointment System Design System
+   Color Palette: Professional blues, medical greens, clean whites
+   All colors are HSL format
+*/
+
+@layer base {
+  :root {
+    --background: 210 33% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Medical Blue - Primary brand color */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Light blue background for sections */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 25% 15%;
+
+    --muted: 210 33% 95%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Medical Green - Success/accent color */
+    --accent: 160 84% 39%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Success green */
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning amber */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Healthcare specific gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(200 80% 50%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(160 84% 39%) 0%, hsl(140 60% 45%) 100%);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 215 25% 15%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .dark {
+    --background: 222 47% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 160 84% 39%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 217 91% 60%;
+
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(200 80% 50%) 100%);
+  }
+  
+  .gradient-success {
+    background: linear-gradient(135deg, hsl(160 84% 39%) 0%, hsl(140 60% 45%) 100%);
+  }
+
+  .text-gradient-primary {
+    background: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(200 80% 50%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
